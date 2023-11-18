@@ -16,7 +16,7 @@ export const Update = () => {
   const handleUpdate=async(e)=>{
     e.preventDefault();
     try {
-      await axios.put(`https://express-crud-bend.onrender.com/api/v1/employee${id}`,
+      await axios.put(`https://express-crud-bend.onrender.com/api/v1/employee/${id}`,
       {ename,email,emobile,});
       history("/");
     } catch (error) {
