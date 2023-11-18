@@ -8,7 +8,7 @@ export const Read = () => {
 
   const getData=async()=>{
     try{
-    const response=await axios.get("http://localhost:5500/api/v1/employee/");//https is not used as it requires certificate
+    const response=await axios.get("https://express-crud-bend.onrender.com/api/v1/employee");//https is not used as it requires certificate
     setData(response.data)
     }
     catch(err){
@@ -21,7 +21,7 @@ export const Read = () => {
   },[]);
 
   const handleDelete=async(id)=>{
-    await axios.delete(`http://localhost:5500/api/v1/employee/${id}`);
+    await axios.delete(`https://express-crud-bend.onrender.com/api/v1/employee/${id}`);
     getData();
   }
 

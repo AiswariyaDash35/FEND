@@ -14,7 +14,7 @@ export const Create = () => {
   const handleSubmit=async(e)=>{
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5500/api/v1/employee/",
+      await axios.post("https://express-crud-bend.onrender.com/api/v1/employee",
       {ename,email,emobile,});
       history("/");
     } catch (error) {
